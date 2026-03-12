@@ -1,0 +1,19 @@
+{
+  "name": "tgbss-redesign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.24",
+    "framer-motion": "^12.34.0",
+    "lucide-react": "^0.564.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
+  }
+}

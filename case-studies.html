@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | TGBSS 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/11.1.7/framer-motion.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; overflow-x: hidden; }
+        .kinetic-text { font-size: clamp(3rem, 8vw, 6rem); line-height: 0.9; font-weight: 900; letter-spacing: -0.05em; }
+        .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.05); border-radius: 32px; overflow: hidden; }
+        .red-accent { color: #E30613; }
+        .blue-accent { color: #004B91; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-8 py-4 flex justify-between items-center bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="flex items-center gap-4">
+            <img src="assets/partners/logo_main.png?v=2026" style="height: 50px; width: auto;" alt="TGBSS Logo">
+            <div class="text-xl font-bold tracking-tighter">TGBSS.</div>
+        </div>
+        <div class="hidden md:flex gap-12 text-sm font-medium uppercase tracking-widest text-gray-500">
+            <a href="index.html" class="hover:text-red-600 transition-colors">Home</a>
+            <a href="the-show.html" class="hover:text-red-600 transition-colors">The Show</a>
+            <a href="performance.html" class="hover:text-red-600 transition-colors">Performance</a>
+            <a href="nutrition.html" class="hover:text-red-600 transition-colors">Nutrition</a>
+            <a href="commercial.html" class="hover:text-red-600 transition-colors">Commercial</a>
+            <a href="case-studies.html" class="hover:text-red-600 transition-colors">Case Studies</a>
+            <a href="contact.html" class="hover:text-red-600 transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-40 pb-20 px-8 md:px-24 bg-white">
+        <div class="max-w-6xl">
+            <span class="text-red-600 font-black uppercase tracking-[0.3em] text-sm">Our Work</span>
+            <h1 class="kinetic-text mt-6 mb-8">GLOBAL IMPACT, <br><span class="blue-accent">LOCAL ENGAGEMENT.</span></h1>
+        </div>
+    </section>
+
+    <!-- Case Studies Grid -->
+    <section class="py-24 px-8 md:px-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <div class="glass-card bg-white group cursor-pointer">
+                <div class="h-80 overflow-hidden">
+                    <img src="assets/media/MATCHDAY-ACTIVATIONS-Engaging-your-fans-from-Fan-Zones-to-On-Pitch-Promotions-Football-Great-British-Sports-Show-Comp.jpg?v=2026" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Chelsea FC">
+                </div>
+                <div class="p-10">
+                    <span class="text-blue-600 font-bold uppercase text-xs tracking-widest">Football</span>
+                    <h3 class="text-3xl font-black mt-4 mb-4">Chelsea FC Fan Day</h3>
+                    <p class="text-gray-500 leading-relaxed">Immersive matchday experience for thousands of fans at Stamford Bridge, featuring bespoke games and skill challenges.</p>
+                </div>
+            </div>
+
+            <div class="glass-card bg-white group cursor-pointer">
+                <div class="h-80 overflow-hidden">
+                    <img src="assets/media/AO-Inflatable-Approach-scaled.jpg?v=2026" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Rugby World Cup">
+                </div>
+                <div class="p-10">
+                    <span class="text-red-600 font-bold uppercase text-xs tracking-widest">Rugby</span>
+                    <h3 class="text-3xl font-black mt-4 mb-4">Rugby World Cup Roadshow</h3>
+                    <p class="text-gray-500 leading-relaxed">National activation tour celebrating the spirit of rugby through interactive fan zones and grassroots engagement.</p>
+                </div>
+            </div>
+
+            <div class="glass-card bg-white group cursor-pointer">
+                <div class="h-80 overflow-hidden">
+                    <img src="assets/media/WORKPLACE-EVENTS-Using-Sport-and-Activity-to-engage-your-workforce-Basketball-Great-British-Sports-Show-Comp.jpg?v=2026" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Corporate Wellbeing">
+                </div>
+                <div class="p-10">
+                    <span class="text-gray-900 font-bold uppercase text-xs tracking-widest">Corporate</span>
+                    <h3 class="text-3xl font-black mt-4 mb-4">Workplace Wellness Series</h3>
+                    <p class="text-gray-500 leading-relaxed">Transforming corporate offices into active zones to boost employee health and productivity across the UK.</p>
+                </div>
+            </div>
+
+            <div class="glass-card bg-white group cursor-pointer text-center flex flex-col items-center justify-center p-12">
+                <h3 class="text-4xl font-black mb-6">And Many More...</h3>
+                <p class="text-gray-400 text-lg mb-8">From London 2012 to the Dubai Beach Soccer World Cup, our portfolio spans the world's biggest stages.</p>
+                <button class="bg-black text-white px-10 py-4 rounded-full font-bold">Request Full Portfolio</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-8 md:px-24 py-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 font-medium bg-white">
+        <div>© 2026 THE GREAT BRITISH SPORTS SHOW. ALL RIGHTS RESERVED.</div>
+        <div class="flex gap-8 mt-4 md:mt-0">
+            <a href="#" class="hover:text-black">PRIVACY</a>
+            <a href="#" class="hover:text-black">TERMS</a>
+            <a href="contact.html" class="hover:text-black">CONTACT</a>
+        </div>
+    </footer>
+
+</body>
+</html>

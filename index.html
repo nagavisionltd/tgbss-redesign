@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Great British Sports Show | 2026 Redesign</title>
+    <!-- Reverting to CDN for stability as per 1st draft -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/11.1.7/framer-motion.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+        .kinetic-text {
+            font-size: clamp(3rem, 10vw, 8rem);
+            line-height: 0.9;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 24px;
+        }
+        .marquee {
+            display: flex;
+            overflow: hidden;
+            user-select: none;
+            gap: 40px;
+        }
+        .marquee-content {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: space-around;
+            min-width: 100%;
+            gap: 40px;
+            animation: scroll 30s linear infinite;
+        }
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+        .red-accent { color: #E30613; }
+        .blue-accent { color: #004B91; }
+        .bg-gradient-soft {
+            background: radial-gradient(circle at top right, rgba(227, 6, 19, 0.03), transparent),
+                        radial-gradient(circle at bottom left, rgba(0, 75, 145, 0.03), transparent);
+        }
+    </style>
+</head>
+<body class="bg-gradient-soft">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-8 py-4 flex justify-between items-center bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="flex items-center gap-4">
+            <img src="assets/partners/logo_main.png?v=2026" style="height: 50px; width: auto;" alt="TGBSS Logo">
+            <div class="text-xl font-bold tracking-tighter">TGBSS.</div>
+        </div>
+        <div class="hidden md:flex gap-12 text-sm font-medium uppercase tracking-widest text-gray-500">
+            <a href="index.html" class="hover:text-red-600 transition-colors">Home</a>
+            <a href="the-show.html" class="hover:text-red-600 transition-colors">The Show</a>
+            <a href="performance.html" class="hover:text-red-600 transition-colors">Performance</a>
+            <a href="nutrition.html" class="hover:text-red-600 transition-colors">Nutrition</a>
+            <a href="commercial.html" class="hover:text-red-600 transition-colors">Commercial</a>
+            <a href="case-studies.html" class="hover:text-red-600 transition-colors">Case Studies</a>
+            <a href="contact.html" class="hover:text-red-600 transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col justify-center px-8 md:px-24 pt-20 overflow-hidden">
+        <!-- Video Background Placeholder -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent z-10"></div>
+            <img src="assets/media/TGBS-Show-Header-Comp-1920x648.jpg?v=2026" class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale" alt="Hero Background">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-30 grayscale contrast-125">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-man-runs-on-a-treadmill-in-a-gym-43414-large.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="max-w-6xl relative z-20">
+            <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-red-50 border border-red-100 mb-8">
+                <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
+                <span class="text-[10px] font-black text-red-900 tracking-widest uppercase italic">A National Human-Potential Engine</span>
+            </div>
+            <h1 class="kinetic-text mb-8 uppercase">
+                UNLOCKING <span class="red-accent italic">POTENTIAL</span> <br>
+                THROUGH <span class="blue-accent">SPORT.</span>
+            </h1>
+            <p class="text-xl md:text-2xl max-w-2xl text-gray-500 font-medium leading-relaxed mb-12">
+                We're more than an event. We are a discovery, development, and opportunity platform powered by the <span class="text-black font-black italic">MediFit Clinical Standard.</span>
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <button onclick="window.location.href='the-show.html'" class="bg-[#E30613] text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-black transition-all shadow-xl shadow-red-500/20 whitespace-nowrap uppercase tracking-widest">
+                    Explore the Show
+                </button>
+                <button onclick="window.location.href='performance.html'" class="border-2 border-black px-10 py-5 rounded-full font-bold text-lg hover:bg-black hover:text-white transition-all whitespace-nowrap uppercase tracking-widest">
+                    Precision Performance
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Marquee -->
+    <section class="py-24 border-y border-gray-100 bg-white">
+        <div class="px-8 mb-12 text-center md:text-left">
+            <p class="text-[10px] uppercase tracking-[0.4em] font-black text-gray-400">Global Partners & Collaborators</p>
+        </div>
+        <div class="marquee">
+            <div class="marquee-content">
+                <img src="assets/partners/adidas-logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Adidas">
+                <img src="assets/partners/AIG-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="AIG">
+                <img src="assets/partners/Ant-and-Dec-Saturday-Night-takeaway.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Saturday Night Takeaway">
+                <img src="assets/partners/AO-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="AO">
+                <img src="assets/partners/aramco-logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Aramco">
+                <img src="assets/partners/Arsenal-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Arsenal">
+                <img src="assets/partners/British-Athletics.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="British Athletics">
+                <img src="assets/partners/British-Handball.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="British Handball">
+                <img src="assets/partners/Cadbury-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Cadbury">
+                <img src="assets/partners/Checkatrade.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Checkatrade">
+                <img src="assets/partners/Chelsea-Club-Crest.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Chelsea FC">
+                <img src="assets/partners/Coca-Cola-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Coca Cola">
+                <img src="assets/partners/Coors-Light-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Coors Light">
+                <img src="assets/partners/ECB-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="ECB">
+                <img src="assets/partners/Emirates-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Emirates">
+                <img src="assets/partners/ESPN-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="ESPN">
+                <img src="assets/partners/Etoro-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Etoro">
+                <img src="assets/partners/FA-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="The FA">
+                <img src="assets/partners/Fifa-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="FIFA">
+                <img src="assets/partners/Ford-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Ford">
+                <img src="assets/partners/Guinness-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Guinness">
+                <img src="assets/partners/Intersport-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Intersport">
+                <img src="assets/partners/Lloyds-Bank-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Lloyds Bank">
+                <img src="assets/partners/London-2012-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="London 2012">
+                <img src="assets/partners/Man-City-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Man City">
+                <img src="assets/partners/Manchester-United-Crest.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Man Utd">
+                <img src="assets/partners/McCain-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="McCain">
+                <img src="assets/partners/McDonalds-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="McDonalds">
+                <img src="assets/partners/Reading.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Reading">
+                <img src="assets/partners/Rugby-Heineken-Champions-Cup.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Heineken Cup">
+                <img src="assets/partners/Rugby-World-Cup.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Rugby World Cup">
+                <img src="assets/partners/Vitality.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="Vitality">
+                <img src="assets/partners/West-Ham.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500" alt="West Ham">
+            </div>
+            <!-- Duplicate for infinite scroll -->
+            <div class="marquee-content">
+                <img src="assets/partners/adidas-logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Adidas">
+                <img src="assets/partners/AIG-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="AIG">
+                <img src="assets/partners/Ant-and-Dec-Saturday-Night-takeaway.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Saturday Night Takeaway">
+                <img src="assets/partners/AO-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="AO">
+                <img src="assets/partners/aramco-logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Aramco">
+                <img src="assets/partners/Arsenal-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Arsenal">
+                <img src="assets/partners/British-Athletics.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="British Athletics">
+                <img src="assets/partners/British-Handball.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="British Handball">
+                <img src="assets/partners/Cadbury-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Cadbury">
+                <img src="assets/partners/Checkatrade.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Checkatrade">
+                <img src="assets/partners/Chelsea-Club-Crest.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Chelsea FC">
+                <img src="assets/partners/Coca-Cola-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Coca Cola">
+                <img src="assets/partners/Coors-Light-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Coors Light">
+                <img src="assets/partners/ECB-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="ECB">
+                <img src="assets/partners/Emirates-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Emirates">
+                <img src="assets/partners/ESPN-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="ESPN">
+                <img src="assets/partners/Etoro-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Etoro">
+                <img src="assets/partners/FA-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="The FA">
+                <img src="assets/partners/Fifa-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="FIFA">
+                <img src="assets/partners/Ford-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Ford">
+                <img src="assets/partners/Guinness-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Guinness">
+                <img src="assets/partners/Intersport-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Intersport">
+                <img src="assets/partners/Lloyds-Bank-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Lloyds Bank">
+                <img src="assets/partners/London-2012-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="London 2012">
+                <img src="assets/partners/Man-City-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Man City">
+                <img src="assets/partners/Manchester-United-Crest.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Man Utd">
+                <img src="assets/partners/McCain-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="McCain">
+                <img src="assets/partners/McDonalds-Logo.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="McDonalds">
+                <img src="assets/partners/Reading.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Reading">
+                <img src="assets/partners/Rugby-Heineken-Champions-Cup.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Heineken Cup">
+                <img src="assets/partners/Rugby-World-Cup.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Rugby World Cup">
+                <img src="assets/partners/Vitality.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="Vitality">
+                <img src="assets/partners/West-Ham.png?v=2026" class="h-10 md:h-12 object-contain grayscale opacity-60" alt="West Ham">
+            </div>
+        </div>
+    </section>
+
+    <!-- The Mission: Rewriting the Story -->
+    <section class="py-32 px-8 md:px-24 bg-white">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-20 items-center">
+            <div class="md:w-1/2">
+                <span class="text-red-600 font-black uppercase tracking-[0.3em] text-sm">Our Ethos</span>
+                <h2 class="text-4xl md:text-6xl font-black mt-6 uppercase leading-tight tracking-tighter italic">REWRITING THE <span class="blue-accent">POSTCODE LOTTERY.</span></h2>
+                <div class="w-24 h-1 bg-red-600 mt-8 mb-12"></div>
+                <p class="text-xl text-gray-500 font-medium leading-relaxed mb-8">
+                    We believe talent is a universal language, but opportunity is still written in a code many cannot crack. Raw sporting skill lives in every high-rise, every rural village, and every bustling inner-city street. 
+                </p>
+                <p class="text-xl text-gray-900 font-black leading-relaxed italic uppercase">
+                    "When a child is never exposed to what they could be brilliant at, they don’t just lose a game—they lose a future."
+                </p>
+            </div>
+            <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                <div class="glass-card p-8 bg-gray-50 flex flex-col justify-center text-center">
+                    <span class="text-3xl font-black red-accent mb-2 tracking-tighter italic">HOPE.</span>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-gray-400">Beyond the Gates</p>
+                </div>
+                <div class="glass-card p-8 bg-gray-50 flex flex-col justify-center text-center mt-8">
+                    <span class="text-3xl font-black blue-accent mb-2 tracking-tighter italic">MOBILITY.</span>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-gray-400">Upward Trajectory</p>
+                </div>
+                <div class="glass-card p-8 bg-gray-50 flex flex-col justify-center text-center -mt-8">
+                    <span class="text-3xl font-black red-accent mb-2 tracking-tighter italic">HEALTH.</span>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-gray-400">Universal Access</p>
+                </div>
+                <div class="glass-card p-8 bg-gray-50 flex flex-col justify-center text-center">
+                    <span class="text-3xl font-black blue-accent mb-2 tracking-tighter italic">FUTURE.</span>
+                    <p class="text-[10px] font-black uppercase tracking-widest text-gray-400">Unlocking Destiny</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Engine: Interactive 4-Layer System -->
+    <section class="py-32 px-8 md:px-24 bg-gray-50 border-y border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24">
+                <span class="text-red-600 font-black uppercase tracking-[0.3em] text-sm">The Architecture</span>
+                <h2 class="text-5xl md:text-8xl font-black mt-6 uppercase leading-none tracking-tighter italic">THE <span class="blue-accent">4-LAYER</span> ENGINE.</h2>
+                <p class="text-xl text-gray-500 max-w-2xl mx-auto mt-8 font-medium">A comprehensive ecosystem designed to solve the end-to-end problem of talent identification and support.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Layer 1 -->
+                <div class="glass-card p-8 bg-white border-2 border-transparent hover:border-red-600 transition-all group cursor-pointer">
+                    <span class="text-4xl font-black text-gray-100 group-hover:text-red-600 transition-colors">01</span>
+                    <h4 class="text-xl font-black mt-4 mb-4 uppercase italic">Discovery</h4>
+                    <p class="text-gray-400 text-sm font-medium leading-relaxed group-hover:text-gray-600 transition-colors">Physical events featuring 40+ sports. Try -> Feel -> Resonate.</p>
+                    <div class="mt-8 opacity-0 group-hover:opacity-100 transition-all">
+                        <a href="the-show.html" class="text-red-600 font-black text-[10px] uppercase tracking-widest flex items-center gap-2">Learn More <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                </div>
+
+                <!-- Layer 2 -->
+                <div class="glass-card p-8 bg-white border-2 border-transparent hover:border-blue-600 transition-all group cursor-pointer">
+                    <span class="text-4xl font-black text-gray-100 group-hover:text-blue-600 transition-colors">02</span>
+                    <h4 class="text-xl font-black mt-4 mb-4 uppercase italic">Development</h4>
+                    <p class="text-gray-400 text-sm font-medium leading-relaxed group-hover:text-gray-600 transition-colors">App-based AI coaching and precision biomechanics in your pocket.</p>
+                    <div class="mt-8 opacity-0 group-hover:opacity-100 transition-all">
+                        <a href="performance.html" class="text-blue-600 font-black text-[10px] uppercase tracking-widest flex items-center gap-2">Learn More <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                </div>
+
+                <!-- Layer 3 -->
+                <div class="glass-card p-8 bg-white border-2 border-transparent hover:border-red-600 transition-all group cursor-pointer">
+                    <span class="text-4xl font-black text-gray-100 group-hover:text-red-600 transition-colors">03</span>
+                    <h4 class="text-xl font-black mt-4 mb-4 uppercase italic">Nutrition</h4>
+                    <p class="text-gray-400 text-sm font-medium leading-relaxed group-hover:text-gray-600 transition-colors">Elite fuel tailored to your DNA delivered directly to your door.</p>
+                    <div class="mt-8 opacity-0 group-hover:opacity-100 transition-all">
+                        <a href="nutrition.html" class="text-red-600 font-black text-[10px] uppercase tracking-widest flex items-center gap-2">Learn More <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                </div>
+
+                <!-- Layer 4 -->
+                <div class="glass-card p-8 bg-white border-2 border-transparent hover:border-blue-600 transition-all group cursor-pointer">
+                    <span class="text-4xl font-black text-gray-100 group-hover:text-blue-600 transition-colors">04</span>
+                    <h4 class="text-xl font-black mt-4 mb-4 uppercase italic">Opportunity</h4>
+                    <p class="text-gray-400 text-sm font-medium leading-relaxed group-hover:text-gray-600 transition-colors">Career pathways beyond the pitch. Building a workforce.</p>
+                    <div class="mt-8 opacity-0 group-hover:opacity-100 transition-all">
+                        <a href="commercial.html" class="text-blue-600 font-black text-[10px] uppercase tracking-widest flex items-center gap-2">Learn More <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive CTA -->
+    <section class="py-32 px-8 text-center bg-[#1a1a1a] text-white mx-8 rounded-[40px] mb-32">
+        <h2 class="text-5xl md:text-7xl font-black mb-8 leading-none">READY TO <span class="red-accent">PLAY?</span></h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
+            The 2026 season is currently in production. Join us as we redefine the future of British sports entertainment.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <input type="email" placeholder="Enter your email" class="bg-white/10 border border-white/20 px-8 py-4 rounded-full w-full md:w-80 focus:outline-none focus:ring-2 focus:ring-red-500">
+            <button class="bg-white text-black px-12 py-4 rounded-full font-bold hover:bg-red-600 hover:text-white transition-all">Get Updates</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-8 md:px-24 py-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 font-medium bg-white">
+        <div>© 2026 THE GREAT BRITISH SPORTS SHOW. ALL RIGHTS RESERVED.</div>
+        <div class="flex gap-8 mt-4 md:mt-0">
+            <a href="#" class="hover:text-black">PRIVACY</a>
+            <a href="#" class="hover:text-black">TERMS</a>
+            <a href="contact.html" class="hover:text-black">CONTACT</a>
+        </div>
+    </footer>
+
+</body>
+</html>

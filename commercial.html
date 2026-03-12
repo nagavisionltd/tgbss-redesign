@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | TGBSS 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/11.1.7/framer-motion.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; overflow-x: hidden; }
+        .kinetic-text { font-size: clamp(3rem, 8vw, 6rem); line-height: 0.9; font-weight: 900; letter-spacing: -0.05em; }
+        .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(0, 0, 0, 0.05); border-radius: 24px; transition: all 0.3s ease; }
+        .glass-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .red-accent { color: #E30613; }
+        .blue-accent { color: #004B91; }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-8 py-4 flex justify-between items-center bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="flex items-center gap-4">
+            <img src="assets/partners/logo_main.png?v=2026" style="height: 50px; width: auto;" alt="TGBSS Logo">
+            <div class="text-xl font-bold tracking-tighter">TGBSS.</div>
+        </div>
+        <div class="hidden md:flex gap-12 text-sm font-medium uppercase tracking-widest text-gray-500">
+            <a href="index.html" class="hover:text-red-600 transition-colors">Home</a>
+            <a href="the-show.html" class="hover:text-red-600 transition-colors">The Show</a>
+            <a href="performance.html" class="hover:text-red-600 transition-colors">Performance</a>
+            <a href="nutrition.html" class="hover:text-red-600 transition-colors">Nutrition</a>
+            <a href="commercial.html" class="hover:text-red-600 transition-colors">Commercial</a>
+            <a href="case-studies.html" class="hover:text-red-600 transition-colors">Case Studies</a>
+            <a href="contact.html" class="hover:text-red-600 transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-40 pb-20 px-8 md:px-24 relative overflow-hidden">
+        <img src="assets/media/PURCHASE-OPTIONS-Bespoke-build-games-and-products-to-enhance-your-event-or-promotion-Great-British-Sports-Show-Comp.jpg?v=2026" class="absolute inset-0 w-full h-full object-cover opacity-10 grayscale" alt="Background">
+        <div class="max-w-6xl text-center mx-auto relative z-10">
+            <span class="text-blue-600 font-black uppercase tracking-[0.3em] text-sm">Capabilities</span>
+            <h1 class="kinetic-text mt-6 mb-8 text-center">ELITE ACTIVATIONS FOR <br><span class="red-accent">WORLD-CLASS BRANDS.</span></h1>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-24 px-8 md:px-24 bg-gray-50">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="glass-card p-10 bg-white">
+                <div class="bg-red-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
+                    <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-black mb-4 uppercase">Event Activations</h3>
+                <p class="text-gray-500 leading-relaxed">Major roadshows and immersive pop-up experiences tailored for brands, marketing agencies, and governing bodies.</p>
+            </div>
+
+            <div class="glass-card p-10 bg-white">
+                <div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
+                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-black mb-4 uppercase">Matchday Promos</h3>
+                <p class="text-gray-500 leading-relaxed">Engaging fans through on-pitch promotions and high-energy fan-zone activities for the Premier League and beyond.</p>
+            </div>
+
+            <div class="glass-card p-10 bg-white">
+                <div class="bg-gray-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
+                    <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                </div>
+                <h3 class="text-2xl font-black mb-4 uppercase">Workplace Events</h3>
+                <p class="text-gray-500 leading-relaxed">Using sport and physical activity to boost employee well-being, engagement, and team unity within the corporate sector.</p>
+            </div>
+
+            <div class="glass-card p-10 bg-white">
+                <div class="bg-red-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
+                    <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-black mb-4 uppercase">TGBS Show</h3>
+                <p class="text-gray-500 leading-relaxed">Our flagship indoor family sports festival, offering an unparalleled mix of fun and fitness for all ages.</p>
+            </div>
+
+            <div class="glass-card p-10 bg-white">
+                <div class="bg-blue-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
+                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-black mb-4 uppercase">Purchase Items</h3>
+                <p class="text-gray-500 leading-relaxed">High-quality, durable sports activation equipment available for outright purchase for your long-term campaigns.</p>
+            </div>
+
+            <div class="glass-card p-10 bg-white">
+                <div class="bg-gray-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-8">
+                    <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-black mb-4 uppercase">Creative Design</h3>
+                <p class="text-gray-500 leading-relaxed">Bespoke design and build services, turning unique briefs into functional, high-impact physical activations.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-8 md:px-24 py-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 font-medium bg-white">
+        <div>© 2026 THE GREAT BRITISH SPORTS SHOW. ALL RIGHTS RESERVED.</div>
+        <div class="flex gap-8 mt-4 md:mt-0">
+            <a href="#" class="hover:text-black">PRIVACY</a>
+            <a href="#" class="hover:text-black">TERMS</a>
+            <a href="contact.html" class="hover:text-black">CONTACT</a>
+        </div>
+    </footer>
+
+</body>
+</html>
