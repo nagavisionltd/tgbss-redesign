@@ -51,6 +51,74 @@
             background: radial-gradient(circle at top right, rgba(227, 6, 19, 0.03), transparent),
                         radial-gradient(circle at bottom left, rgba(0, 75, 145, 0.03), transparent);
         }
+        /* NagaVision refinement: vivid imagery, responsive typography and no-overflow guardrails */
+        :root { --navy: #071b35; --electric: #23c8f5; --lime: #d8ff3e; --signal: #e30613; }
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { max-width: 100%; overflow-x: clip; }
+        img, video, svg { max-width: 100%; }
+        h1, h2, h3, h4, p, a, button, span { overflow-wrap: anywhere; }
+        .kinetic-text {
+            font-family: 'Microgramma', 'Eurostile', 'Arial Black', sans-serif;
+            font-size: clamp(2.65rem, 7.2vw, 7.2rem);
+            line-height: .98; letter-spacing: -.035em;
+            max-width: 100%; text-wrap: balance;
+        }
+        nav { padding-left: clamp(1rem, 4vw, 3.5rem) !important; padding-right: clamp(1rem, 4vw, 3.5rem) !important; gap: 1rem; }
+        nav img { max-height: 42px; object-fit: contain; }
+        nav .hidden.md\\:flex { gap: clamp(.7rem, 1.7vw, 1.8rem) !important; flex-wrap: wrap; justify-content: flex-end; }
+        section { min-width: 0; }
+        .glass-card { min-width: 0; overflow: hidden; }
+        .marquee { gap: clamp(1.5rem, 4vw, 2.5rem); }
+        .marquee-content { align-items: center; gap: clamp(1.5rem, 4vw, 2.5rem); padding-right: 2rem; }
+        .marquee-content img { width: auto; max-width: 150px; height: clamp(2rem, 4vw, 3rem); object-fit: contain; flex: 0 0 auto; }
+        .bg-gradient-soft { background: radial-gradient(circle at 88% 8%, rgba(35,200,245,.13), transparent 30%), radial-gradient(circle at 4% 45%, rgba(227,6,19,.07), transparent 28%), #fff; }
+        /* Hero is cinematic and colourful rather than washed-out and grayscale. */
+        body > section:first-of-type { background: var(--navy); color: white; isolation: isolate; }
+        body > section:first-of-type > div:first-child img { opacity: .58 !important; filter: saturate(1.2) contrast(1.08) !important; }
+        body > section:first-of-type > div:first-child video { opacity: .30 !important; filter: saturate(1.25) contrast(1.08) !important; }
+        body > section:first-of-type > div:first-child > div { background: linear-gradient(90deg, rgba(7,27,53,.96) 0%, rgba(7,27,53,.78) 48%, rgba(7,27,53,.12) 100%) !important; }
+        body > section:first-of-type h1 { color: #fff; }
+        body > section:first-of-type .blue-accent { color: var(--electric); }
+        body > section:first-of-type p { color: rgba(255,255,255,.83); }
+        body > section:first-of-type p .text-black { color: white !important; }
+        body > section:first-of-type .inline-flex { background: rgba(227,6,19,.18); border-color: rgba(255,255,255,.22); }
+        body > section:first-of-type .inline-flex span:last-child { color: white; }
+        body > section:first-of-type button { max-width: 100%; white-space: normal; }
+        body > section:nth-of-type(2) { background: #071b35; color: white; }
+        body > section:nth-of-type(2) p { color: rgba(255,255,255,.58); }
+        body > section:nth-of-type(2) .marquee-content img { filter: grayscale(1) brightness(0) invert(1); opacity: .72; }
+        body > section:nth-of-type(2) .marquee-content img:hover { filter: none; }
+        body > section:nth-of-type(3) .glass-card { box-shadow: 0 18px 55px rgba(7,27,53,.07); }
+        body > section:nth-of-type(4) { background: linear-gradient(145deg,#f4f8fc,#edf5fa); }
+        body > section:nth-of-type(4) .glass-card { box-shadow: 0 18px 45px rgba(7,27,53,.08); }
+        body > section:nth-of-type(5) { background: linear-gradient(135deg,#071b35,#102d51 72%,#12445d); }
+        body > section:nth-of-type(5) h2 { text-wrap: balance; }
+        body > section:nth-of-type(5) .red-accent { color: var(--lime); }
+        body > section:nth-of-type(5) input { min-width: 0; }
+        @media (max-width: 767px) {
+            nav { padding-top: .8rem !important; padding-bottom: .8rem !important; }
+            nav .text-xl { font-size: 1rem; }
+            body > section:first-of-type { min-height: 92svh; padding-left: 1.25rem !important; padding-right: 1.25rem !important; padding-top: 7rem !important; padding-bottom: 4rem !important; }
+            .kinetic-text { font-size: clamp(2.45rem, 11vw, 4.6rem); line-height: 1.02; letter-spacing: -.045em; }
+            body > section:first-of-type p { font-size: 1.05rem !important; }
+            body > section:first-of-type .inline-flex { align-items: flex-start; max-width: 100%; }
+            body > section:first-of-type button { width: 100%; padding: 1rem 1.2rem !important; font-size: .9rem !important; letter-spacing: .08em !important; }
+            body > section:nth-of-type(2) { padding-top: 3rem; padding-bottom: 3rem; }
+            body > section:nth-of-type(3), body > section:nth-of-type(4) { padding: 4.5rem 1.25rem !important; }
+            body > section:nth-of-type(3) .max-w-6xl { gap: 2.5rem !important; }
+            body > section:nth-of-type(3) h2 { font-size: clamp(2rem, 9vw, 3.5rem) !important; }
+            body > section:nth-of-type(4) h2 { font-size: clamp(2.2rem, 10vw, 4rem) !important; }
+            body > section:nth-of-type(4) .text-center { margin-bottom: 3rem !important; }
+            body > section:nth-of-type(5) { margin-left: .75rem !important; margin-right: .75rem !important; border-radius: 1.5rem !important; padding: 4rem 1.25rem !important; }
+            body > section:nth-of-type(5) h2 { font-size: clamp(2.2rem, 10vw, 4rem) !important; }
+            footer { padding-left: 1.25rem !important; padding-right: 1.25rem !important; text-align: center; gap: 1rem; }
+            footer .flex { flex-wrap: wrap; justify-content: center; gap: 1.25rem; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+        }
     </style>
 </head>
 <body class="bg-gradient-soft">
